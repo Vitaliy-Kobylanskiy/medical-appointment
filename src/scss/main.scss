@@ -1,0 +1,290 @@
+.main {
+    margin: 20px auto;
+
+    @media (max-width: 640px) {
+        margin: 10px auto;
+    }
+}
+
+.board-message {
+    margin-top: 200px;
+    font-size: 40px;
+    text-align: center;
+
+    &.board-message-none {
+        display: none;
+    }
+}
+
+.data-enter {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+
+    & div {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    & div * {
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    &.data-enter-none {
+        display: none;
+    }
+}
+
+.filters form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin: 0 10px;
+
+    @media (max-width: 640px) {
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: 22px;
+    }
+}
+
+.form-field {
+    margin-bottom: 5px;
+}
+
+.label {
+    margin-left: 10px;
+}
+
+input,
+select {
+    border: solid 0.5px #ecebf1;
+    background-color: #f9f8fc;
+    width: 130px;
+
+    @media (max-width: 400px) {
+        width: 105px;
+    }
+}
+
+.filters input[type='text'],
+.filters select {
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.filter-button[type='submit'] {
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px;
+
+    &:hover {
+        background-color: #105712;
+    }
+
+    &.reset-button {
+        background-color: #a64141;
+    }
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    margin-top: 70px;
+    font-size: 16px;
+
+    @media (max-width: 640px) {
+        margin-top: 40px;
+    }
+}
+
+.card {
+    width: 300px;
+    background-color: #d8dcee;
+    border: 1px solid #4e609d;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    position: relative;
+    padding-top: 24px;
+}
+
+.card-info button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.doctor-name {
+    color: #1c2131;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.propName {
+    color: blue;
+    text-decoration: underline;
+}
+
+.propValue {
+    color: #131315;
+}
+
+.show-more-btn:after {
+    content: 'Показати більше';
+}
+
+.show-less-btn:after {
+    content: 'Показати меньше';
+}
+
+.edit-btn:after {
+    content: 'Редагувати';
+}
+
+.edit-close-btn:after {
+    content: 'Закрити';
+}
+
+.card-info button:hover {
+    background-color: #0062cc;
+}
+
+.card-info .delete-icon::before {
+    content: '×';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 24px;
+    line-height: 12px;
+    cursor: pointer;
+    color: #1c1a1a;
+    border: 1px solid #1c1a1a;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.card-info .delete-icon:hover::before {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.extra-info {
+    display: none;
+
+    &.visible {
+        display: block;
+    }
+}
+
+.change-info {
+    display: block;
+    color: blue;
+    text-decoration: underline;
+}
+
+//псевдо loader
+
+.loading {
+    display: flex;
+    justify-content: center;
+    color: #fa0404;
+    font-size: 20px;
+    font-weight: 600;
+    animation: blink 400ms alternate infinite;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.5;
+    }
+}
+
+//loader при начальной загрузке
+
+.loader {
+    background: none repeat scroll 0 0 #fff;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+.loader .loader_inner {
+    animation: animate 1.5s linear infinite;
+    clip: rect(0, 80px, 80px, 40px);
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: calc(50% - 40px);
+    top: calc(50% - 40px);
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(220deg)
+    }
+}
+
+.loader .loader_inner:after {
+    animation: animate2 1.5s ease-in-out infinite;
+    clip: rect(0, 80px, 80px, 40px);
+    content: '';
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+}
+
+@keyframes animate2 {
+    0% {
+        box-shadow: inset #b3dfd8 0 0 0 17px;
+        transform: rotate(-140deg);
+    }
+
+    50% {
+        box-shadow: inset #b3dfd8 0 0 0 2px;
+    }
+
+    100% {
+        box-shadow: inset #b3dfd8 0 0 0 17px;
+        transform: rotate(140deg);
+    }
+}

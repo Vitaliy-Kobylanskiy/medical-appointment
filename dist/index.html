@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/care-health.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Medical Appointment</title>
+</head>
+
+<body>
+    <header class="header">
+	<div class="logo">
+		<img src="./img/care-health.svg" alt="Logo" />
+	</div>
+	<div class="actions">
+		<button class="login-btn">Вхід</button>
+		<button class="create-visit-btn hidden">Створити візит</button>
+	</div>
+
+	<form class="password-form">
+		<div class="entry">
+			<input type="email" placeholder="Email"/>
+			<input type="password" placeholder="Password"/>
+		</div>
+		<button type="#" class="submit-btn">Підтвердити</button>
+		<p class="error"></p>
+	</form>
+
+	<form class="visit-form">
+		<div>
+		<label for="">Лікар</label><br>
+		<select name="doctor" class="doctor">
+			<option value="" disabled selected></option>
+			<option value="cardiologist">Кардіолог</option>
+			<option value="dentist">Стоматолог</option>
+			<option value="therapist">Терапевт</option>
+		</select>
+		</div>
+	</form>
+
+	<form class="visit-form-info">
+		<input type="text" name="purpose" placeholder="Мета візиту">
+		<input type="text" name="description" placeholder="Опис візиту">
+		<div>
+			<label for="">Терміновість</label><br>
+			<select name="urgency" class="urgency-select">
+				<option value="" disabled selected></option>
+				<option value="emergency">Терміново</option>
+				<option value="normal">Нормально</option>
+				<option value="not-urgent">Не терміново</option>
+			</select>
+		</div>
+		<input type="text" name="name" placeholder="ПІБ">
+		<input type="text" name="pressure" data-extra="cardiologist" placeholder="Звичайний тиск"/>
+		<input type="text" name="index" data-extra="cardiologist" placeholder="Індекс маси тіла"/>
+		<input type="text" name="disease" data-extra="cardiologist" placeholder="Перенесені захворювання серцево-судинної системи"/>
+		<input type="text" name="age" data-extra="cardiologist" placeholder="Вік"/>
+		<input type="text" name="data" data-extra="dentist" placeholder="Дата останнього відвідування"/>
+		<input type="text" name="age" data-extra="therapist" placeholder="Вік"/>
+		<button class="create-button">Створити</button>
+		<button class="create-button close">Закрити</button>
+	</form>
+
+</header>
+
+
+    <main class="main">
+    <div class="filters">
+        <form>
+            <div class="form-field">
+                <label for="" class="label">Мета візиту</label>
+                <input name="purpose" type="text" placeholder="Пошук" />
+            </div>
+            <div class="form-field">
+                <label for="" class="label">Лікар</label>
+                <select name="doctor" class="doctor-filter">
+                    <option value=""></option>
+                    <option value="cardiologist">Кардіолог</option>
+                    <option value="dentist">Стоматолог</option>
+                    <option value="therapist">Терапевт</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label for="" class="label">Терміновість</label>
+                <select name="urgency" class="urgency-filter">
+                    <option value=""></option>
+                    <option value="emergency">Терміново</option>
+                    <option value="normal">Нормально</option>
+                    <option value="not-urgent">Не терміново</option>
+                </select>
+            </div>
+            <button class="filter-button" type="submit">Фільтрувати</button>
+        </form>
+    </div>
+    <div class="loader">
+        <div class="loader_inner"></div>
+    </div>
+    <h2 class="board-message">No items have been added</h2>
+    <div class="data-enter">
+        <div>
+            <p>Для тестового входу:</p>
+            <p>Email: vkobytest@gmail.com</p>
+            <p>Password: vkobytest</p>
+        </div>
+    </div>
+    <div class="cards">
+    </div>
+</main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/script.min.js"></script>
+</body>
+
+</html>

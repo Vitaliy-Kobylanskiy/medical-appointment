@@ -1,0 +1,55 @@
+<header class="header">
+	<div class="logo">
+		<img src="./img/care-health.svg" alt="Logo" />
+	</div>
+	<div class="actions">
+		<button class="login-btn">Вхід</button>
+		<button class="create-visit-btn hidden">Створити візит</button>
+	</div>
+
+	<form class="password-form">
+		<div class="entry">
+			<input type="email" placeholder="Email"/>
+			<input type="password" placeholder="Password"/>
+		</div>
+		<button type="#" class="submit-btn">Підтвердити</button>
+		<p class="error"></p>
+	</form>
+
+	<form class="visit-form">
+		<div>
+		<label for="">Лікар</label><br>
+		<select name="doctor" class="doctor">
+			<option value="" disabled selected></option>
+			<option value="cardiologist">Кардіолог</option>
+			<option value="dentist">Стоматолог</option>
+			<option value="therapist">Терапевт</option>
+		</select>
+		</div>
+	</form>
+
+	<form class="visit-form-info">
+		<input type="text" name="purpose" placeholder="Мета візиту">
+		<input type="text" name="description" placeholder="Опис візиту">
+		<div>
+			<label for="">Терміновість</label><br>
+			<select name="urgency" class="urgency-select">
+				<option value="" disabled selected></option>
+				<option value="emergency">Терміново</option>
+				<option value="normal">Нормально</option>
+				<option value="not-urgent">Не терміново</option>
+			</select>
+		</div>
+		<input type="text" name="name" placeholder="ПІБ">
+		<input type="text" name="pressure" data-extra="cardiologist" placeholder="Звичайний тиск"/>
+		<input type="text" name="index" data-extra="cardiologist" placeholder="Індекс маси тіла"/>
+		<input type="text" name="disease" data-extra="cardiologist" placeholder="Перенесені захворювання серцево-судинної системи"/>
+		<input type="text" name="age" data-extra="cardiologist" placeholder="Вік"/>
+		<input type="text" name="data" data-extra="dentist" placeholder="Дата останнього відвідування"/>
+		<input type="text" name="age" data-extra="therapist" placeholder="Вік"/>
+		<button class="create-button">Створити</button>
+		<button class="create-button close">Закрити</button>
+	</form>
+
+</header>
+

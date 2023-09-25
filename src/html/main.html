@@ -1,0 +1,42 @@
+<main class="main">
+    <div class="filters">
+        <form>
+            <div class="form-field">
+                <label for="" class="label">Мета візиту</label>
+                <input name="purpose" type="text" placeholder="Пошук" />
+            </div>
+            <div class="form-field">
+                <label for="" class="label">Лікар</label>
+                <select name="doctor" class="doctor-filter">
+                    <option value=""></option>
+                    <option value="cardiologist">Кардіолог</option>
+                    <option value="dentist">Стоматолог</option>
+                    <option value="therapist">Терапевт</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label for="" class="label">Терміновість</label>
+                <select name="urgency" class="urgency-filter">
+                    <option value=""></option>
+                    <option value="emergency">Терміново</option>
+                    <option value="normal">Нормально</option>
+                    <option value="not-urgent">Не терміново</option>
+                </select>
+            </div>
+            <button class="filter-button" type="submit">Фільтрувати</button>
+        </form>
+    </div>
+    <div class="loader">
+        <div class="loader_inner"></div>
+    </div>
+    <h2 class="board-message">No items have been added</h2>
+    <div class="data-enter">
+        <div>
+            <p>Для тестового входу:</p>
+            <p>Email: vkobytest@gmail.com</p>
+            <p>Password: vkobytest</p>
+        </div>
+    </div>
+    <div class="cards">
+    </div>
+</main>
